@@ -226,6 +226,7 @@ z-index: 3;
   margin-left: 30px;
   margin-right: 30px;
   object-fit: cover;
+  
 }
 
 .img1::after, .img2::after {
