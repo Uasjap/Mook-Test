@@ -8,22 +8,30 @@ import Result from './pages/Result'
 
 import {AnimatePresence} from 'framer-motion'
 
+import { useState } from 'react';
+
 function App() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const location = useLocation();
+
+  const closeLogin = () => {
+    setIsLoginOpen(false);
+  };
+
   return (
     <>
-    <AnimatePresence>
-      <Routes location={location} key={location.pathname}>
-        <Route path='/' element={<MainPage/>}/>
-        <Route path='/upload' element={<Upload/>}/>
-        <Route path='/result' element={<Result/>}/>
-        <Route path='/loggedin' element={<MainLoggedIn/>}/>
-        <Route path='/login' element={<Login/>}/>
-      </Routes>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path='/upload' element={<Upload/>}/>
+          <Route path='/result' element={<Result/>}/>
+          <Route path='/loggedin' element={<MainLoggedIn/>}/>
+          {isLoginOpen && <Route path='/login' element={<Login onClose={closeLogin}/>}/>}
+        </Routes>
       </AnimatePresence>
     </>
   )
 }
 
-export default App
+export default App;
 
