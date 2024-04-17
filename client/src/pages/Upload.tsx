@@ -1,5 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
+import cameraPng from '../img/camera.png'
+import galleryPng from '../img/gallery.png'
 
 export default function Upload():JSX.Element {
 
@@ -28,11 +30,11 @@ export default function Upload():JSX.Element {
     </div>
     <div className='optionContainer'>
         <button onClick={() => handlemorePhotosClick()} className='choosePhoto'>
-            <img className='icon' src='../img/gallery.png' alt='img' />
+            <img className='icon' src={galleryPng} alt='img' />
             <div className='textPage2'>Choose photo from gallery</div>
         </button>
         <button onClick={() => handlemorePhotosClick()} className='takePhoto'>
-            <img className='icon' src='../img/camera.png' alt='img' />
+            <img className='icon' src={cameraPng} alt='img' />
             <div className='textPage2'>Take photo with camera</div>
         </button>
     </div>
