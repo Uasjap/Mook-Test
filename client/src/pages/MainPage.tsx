@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Photo from './Photo'
 import { useNavigate } from 'react-router-dom'
 import {AnimatePresence, motion} from 'framer-motion'
