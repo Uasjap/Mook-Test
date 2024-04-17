@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom'
+import redX from '../img/Red_X.svg.png'
 
 interface LoginProps {
     onClose: () => void;
@@ -29,7 +30,7 @@ export default function Login({onClose}: LoginProps):JSX.Element {
         animate={{opacity: 1}}
         exit={{opacity: 0}}
         transition={{type: 'tween', duration: 0.5}}>
-    <img className='backbtn' src='../img/Red_X.svg.png' onClick={handleClose}/>
+    <img className='backbtn' src={redX} onClick={handleClose}/>
     <input 
     className='logInput'
     type='email'
