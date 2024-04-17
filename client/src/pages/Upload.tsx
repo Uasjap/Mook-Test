@@ -24,7 +24,8 @@ export default function Upload():JSX.Element {
         transition={{type: 'tween', duration: 0.5}}>
             <button className='goBack' onClick={() => handleGoBack()}><img className='bracket' src='src\img\leftanglebracket_120651.png' alt='img'/> Go Back</button>
     <div className='imgContainer'>
-        <img className='uploadImg' src='src\img\selfy_by_crayolajustgotbetter_d6lk534-pre.jpg' alt='img'/>
+        <div className='uploadImg img1'></div>
+        <div className='uploadImg img2'></div>
     </div>
     <div className='optionContainer'>
         <button onClick={() => handlemorePhotosClick()} className='choosePhoto'>
